@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body ng-app="carapp" ng-controller="carController">
+<h3>Enter the Car serial number: </h3>
+<input type="text" name="cars" ng-model="csno" ng-keyup="checkSerial();">
+<h2>Your serial number is: {{csno}}</h2>
+<hr>
+<br>
+<div ng-show="datashow">
+<h2>Car details:</h2>
+<br>
+Serial no.: <span style="color:blue;font-size: 14px;" ng-bind="cardetail.cid"></span>
+<br>
+Name: <span style="color:blue;font-size: 14px;" ng-bind="cardetail.name"></span>
+<br>
+Model: <span style="color:blue;font-size: 14px;" ng-bind="cardetail.model"></span>
+<br>
+Vendor:<span style="color:blue;font-size: 14px;" ng-bind="cardetail.vendor"></span>
+<br>
+Engine:<span style="color:blue;font-size: 14px;" ng-bind="cardetail.engine"></span>
+<br>
+Photo:<img ng-src="img/{{cardetail.photo}}" alt="Description" style="border-radius: 50%;" />
+<br>
+</div>
+<footer>
+	Copyright@SynergisticIT 2016
+</footer> 
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="js/car.js"></script>
+<script src="js/app.js"></script>
+<script src="js/service.js"></script>
+<script src="js/controller.js"></script>
+</body>
+</html>
