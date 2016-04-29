@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="background-color:pink"  ng-app="meanapp"  ng-controller="checkNameController">
+
+     <hr/>
+      <img alt="" src="angular.png" style="height: 100px;">
+     <br/>
+    <br/>
+    Enter your Name   <input type="text"  name="pname"  ng-model="nname"  style="width: 400px;" ng-keyup="checkName();"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button  style="background-color: pink;" ng-click="checkName();" >GO</button>
+     <div ng-show="datashow">
+    <br/><br/>
+     <img ng-src="img/{{dog.photo}}" alt="Description" style="border-radius: 50%;"/>
+        <br/><br/>
+      Email   :   <span style="color:blue;font-size: 14px;" ng-bind="dog.email"></span>
+      <br/><br/>
+      Name   :   <span style="color:blue;font-size: 14px;" ng-bind="dog.name"></span>
+      
+      <br/><br/>
+      Breed   :   <span style="color:blue;font-size: 14px;" ng-bind="dog.breed"></span>
+      
+      <br/><br/>
+      Description   :   <span style="color:blue;font-size: 14px;" ng-bind="dog.description"></span>
+      </div>
+    <br/>
+    <br/>
+    <hr/>
+    It;s really magic man !!!!!!!!  <input type="text"  name="result"  ng-model="pname"/>
+      <h2 style="color:red;font-weight: bold;">Hello Mr............{{nname}}</h2>
+    Welcome Mr.   <span style="color:black;font-weight: bold;" ng-bind="nname">123123131232</span>
+    
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/><br/>
+    <footer style="background-color: rgb(230, 230, 198);">
+       Copyright @ SynergisticIT 2016
+    </footer>
+    
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+ 	<script src = "js/dog.js"></script>
+ 	<script src = "js/app.js"></script>
+ 	<script src = "js/service.js"></script>
+	<script src = "js/controller.js"></script>
+</body>
+</html>
